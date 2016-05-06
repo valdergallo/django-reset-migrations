@@ -27,7 +27,7 @@ settings.py
 
 INSTALL_APPS = (
     ...
-    'resetmigrations',
+    'reset_migrations',
     .....
 )
 ```
