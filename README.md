@@ -1,3 +1,7 @@
+[![License](http://img.shields.io/:license-apache-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![PyPI Downloads] (http://img.shields.io/pypi/dm/django-reset-migrations.svg)](https://pypi.python.org/pypi/django-reset-migrations)
+
+
 # Django reset migrations
 
 Add one command to reset the django migrations.
