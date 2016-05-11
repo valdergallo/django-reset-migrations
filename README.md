@@ -16,6 +16,14 @@ Because this, I made this command to reset the migrations and start the first mi
 
 I hope be usefull to you 2 :D
 
+# Features
+
+* delete migrations files
+* delete registers in django_migrations
+* recreate the first migrations
+* apply fake migration
+* delete register without delete files with --cached
+
 
 ## To install
 
