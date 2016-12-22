@@ -5,7 +5,7 @@ import os
 import shutil
 import re
 import tempfile
-
+from __future__ import print_function
 
 def delete_line(filename, pattern):
     pattern_compiled = re.compile(pattern)
@@ -13,7 +13,7 @@ def delete_line(filename, pattern):
         with open(filename) as src_file:
             for line in src_file:
                 if pattern_compiled.findall(line):
-                    print 'Deleting line in %s' % filename
+                    print_function('Deleting line in %s' % filename)
                     continue
                 tmp_file.write(line)
 
