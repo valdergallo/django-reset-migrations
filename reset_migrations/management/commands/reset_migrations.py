@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from django.core.management import BaseCommand
 from django.core.management import call_command
 from django.db import connection
@@ -5,7 +7,6 @@ import os
 import shutil
 import re
 import tempfile
-from __future__ import print_function
 
 def delete_line(filename, pattern):
     pattern_compiled = re.compile(pattern)
