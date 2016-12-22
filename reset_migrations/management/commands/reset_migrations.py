@@ -31,9 +31,6 @@ class Command(BaseCommand):
         self.cursor = connection.cursor()
         return super(Command, self).__init__(*args, **kwargs)
 
-    def __del__(self, *args, **kwargs):
-        self.cursor.close()
-
     def add_arguments(self, parser):
         parser.add_argument('apps', nargs='+', type=str)
 
