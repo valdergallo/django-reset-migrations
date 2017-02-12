@@ -48,15 +48,15 @@ INSTALL_APPS = (
 
 
 ```
-    python manage.py reset_migration crm
+    python manage.py reset_migrations crm
 
     or
 
-    python manage.py reset_migration app1 app2
+    python manage.py reset_migrations app1 app2
 
     or
 
-    python manage.py reset_migration app1 app2 --cached
+    python manage.py reset_migrations app1 app2 --cached
 ```
 
 
