@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from django.core.management import BaseCommand
 from django.core.management import call_command
 from django.db import connection
@@ -6,14 +8,13 @@ import shutil
 import re
 import tempfile
 
-
 def delete_line(filename, pattern):
     pattern_compiled = re.compile(pattern)
     with tempfile.NamedTemporaryFile(mode='w', delete=False) as tmp_file:
         with open(filename) as src_file:
             for line in src_file:
                 if pattern_compiled.findall(line):
-                    print 'Deleting line in %s' % filename
+                    print_function('Deleting line in %s' % filename)
                     continue
                 tmp_file.write(line)
 
@@ -29,9 +30,6 @@ class Command(BaseCommand):
     def __init__(self, *args, **kwargs):
         self.cursor = connection.cursor()
         return super(Command, self).__init__(*args, **kwargs)
-
-    def __del__(self, *args, **kwargs):
-        self.cursor.close()
 
     def add_arguments(self, parser):
         parser.add_argument('apps', nargs='+', type=str)
