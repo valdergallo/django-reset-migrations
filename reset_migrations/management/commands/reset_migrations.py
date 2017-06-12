@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 from django.core.management import BaseCommand
 from django.core.management import call_command
 from django.db import connection
@@ -8,13 +6,13 @@ import shutil
 import re
 import tempfile
 
-def delete_line(filename, pattern):
+def delete_line(filename, pattern, stdout):
     pattern_compiled = re.compile(pattern)
     with tempfile.NamedTemporaryFile(mode='w', delete=False) as tmp_file:
         with open(filename) as src_file:
             for line in src_file:
                 if pattern_compiled.findall(line):
-                    print_function('Deleting line in %s' % filename)
+                    stdout.write('Deleting line in %s' % filename)
                     continue
                 tmp_file.write(line)
 
@@ -64,7 +62,7 @@ class Command(BaseCommand):
                                 continue
                             if '.py' in file_name:
                                 regex = r'\(\'%s\'' % app
-                                delete_line(file_name, regex)
+                                delete_line(file_name, regex, self.stdout)
 
     def handle(self, *args, **options):
         apps = options['apps']
