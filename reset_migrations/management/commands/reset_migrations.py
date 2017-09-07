@@ -14,7 +14,7 @@ def delete_line(filename, pattern):
         with open(filename) as src_file:
             for line in src_file:
                 if pattern_compiled.findall(line):
-                    print_function('Deleting line in %s' % filename)
+                    print('Deleting line in %s' % filename)
                     continue
                 tmp_file.write(line)
 
