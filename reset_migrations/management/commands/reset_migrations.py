@@ -76,7 +76,8 @@ class Command(BaseCommand):
                 self.delete_dependence_app(app)
             self.stdout.write("APP (%s) deleted with sucess" % app)
 
-        call_command('makemigrations', *apps)
+        if not options['cached']:
+            call_command('makemigrations', *apps)
 
         for app in apps:
             call_command('migrate', app, '--fake')
