@@ -62,4 +62,4 @@ INSTALLED_APPS = (
 
 ## Options
 
-**--cached**:  Don´t delete the migrations files in apps
+**--cached**:  Don´t delete the migrations files in apps and not will call make_migrations
