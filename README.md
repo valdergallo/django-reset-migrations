@@ -31,13 +31,13 @@ I hope be usefull to you 2 :D
     pip install django-reset-migrations
 ```
 
-Install package in your INSTALL_APPS
+Install package in your INSTALLED_APPS
 
 
 ```
 settings.py
 
-INSTALL_APPS = (
+INSTALLED_APPS = (
     ...
     'reset_migrations',
     .....
