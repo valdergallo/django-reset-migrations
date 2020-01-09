@@ -1,5 +1,5 @@
 [![License](http://img.shields.io/:license-apache-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![PyPI Downloads] (http://img.shields.io/pypi/dm/django-reset-migrations.svg)](https://pypi.python.org/pypi/django-reset-migrations)
+[![PyPI Downloads](http://img.shields.io/pypi/dm/django-reset-migrations.svg)](https://pypi.python.org/pypi/django-reset-migrations)
 
 
 # Django reset migrations
@@ -31,13 +31,13 @@ I hope be usefull to you 2 :D
     pip install django-reset-migrations
 ```
 
-Install package in your INSTALL_APPS
+Install package in your INSTALLED_APPS
 
 
 ```
 settings.py
 
-INSTALL_APPS = (
+INSTALLED_APPS = (
     ...
     'reset_migrations',
     .....
